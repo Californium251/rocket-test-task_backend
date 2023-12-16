@@ -144,7 +144,7 @@ export class AmocrmService {
           );
           return await this.getAmoData(query, newToken.data.access_token);
         } catch (e) {
-          console.log('Error refreshing token', e.message);
+          console.log('Error refreshing token', e);
         }
       } else {
         throw new Error(`Error fetching data from amoCRM: ${error.message}`);
